@@ -2,6 +2,8 @@ import protocol
 import socket
 import threading
 
+# ot
+
 SIZE_LENGTH = 8
 SIZE_TO_READ = 1024
 PORT = 8820
@@ -9,6 +11,7 @@ IP = "0.0.0.0"
 CMD_SIZE = 3
 NUM_OF_START_IMGS = 10
 IMGS_EXTENSION = "jpg"
+DIR = "imgs\\"
 
 
 def main(client_sock):
@@ -24,10 +27,10 @@ def main(client_sock):
     cmd_competition_picture = "CMP"
 
     # ------VARIABLES------
-    opening_img = "opening.jpg"
-    help_img = "help.jpg"
-    start_img = "start"
-    comp_img = "comp.jpg"
+    opening_img = "imgs\\opening.jpg"
+    help_img = "imgs\\help.jpg"
+    start_img = "imgs\\start"
+    comp_img = "imgs\\comp.jpg"
     window_width = 1280
     window_height = 710
     help_button = "WHAT?"
