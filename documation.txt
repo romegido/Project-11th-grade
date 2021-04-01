@@ -1,0 +1,32 @@
+The communication between the server and the client:
+-------------------------
+
+
+General rules:
+- the length field size is 8
+- the port is 8820
+- the separator is "_"
+
+
+List of commands:
+(Those that has * next to them means they require bytes message
+- *BPT = beginning picture
+- PPR = proportions (of the screen)
+- OB1 = location of opening button 1 (the help)
+- OB2 = location of opening button 1 (the start)
+- OB3 = location of opening button 1 (the comp)
+- OB4 = location of exit button
+- *HPT = help picture
+- *SPT = start picture
+- *CMP = competition picture
+
+
+The communication process:
+1. the client requests the beginning picture and the server sends the opening image
+2. the client requests the proportions and the sever sends the screen proportions (first is the width, second is the height,
+   between them is _)
+3. the client requests the locations of the buttons and the server sends three messages, each is built out of:
+   upper x value + "_" + upper y value + "_" + lower x value + "_" + lower y value,
+   and the order of the messages is that the first message is for the help button, the second is for the start button,
+   the third is for the competition button, and the forth is for the exit button
+4. the client requests the
