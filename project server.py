@@ -1,8 +1,5 @@
-import protocol
 import socket
 import threading
-
-# ot
 
 SIZE_LENGTH = 8
 SIZE_TO_READ = 1024
